@@ -23,7 +23,7 @@ Checklist.all.each do |checklist|
   habitat = "Oak woodland"
   vegetation = "Valley Oak"
 
-  10.times do |x|
-    checklist.sightings.create(species: species, count: count, distance: distance, observation_type: observation_type, location: location, habitat: habitat, vegetation: vegetation)
+  20.times do |x|
+    checklist.sightings.create(species: species, count: count, distance: distance, observation_type: observation_type, location: location, habitat: habitat, vegetation: vegetation, user_id: User.all.sample.id)
   end
 end

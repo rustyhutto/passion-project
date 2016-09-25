@@ -8,7 +8,8 @@ class CreateSightings < ActiveRecord::Migration
       t.string   :location, null: false
       t.string   :habitat, null: false
       t.string   :vegetation, null: false
-      t.references :checklist, null: false
+      t.references :checklist
+      t.references :user
 
       t.timestamps
     end

@@ -19,7 +19,7 @@ gem 'awesome_print'
 gem 'pry'
 
 gem 'bcrypt'
-gem 'faker'
+gem 'faker', '~>1.6.6'
 
 group :test do
   gem 'shoulda-matchers'

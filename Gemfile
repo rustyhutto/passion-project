@@ -14,6 +14,13 @@ gem 'rake'
 
 gem 'shotgun', '~>0.9.1'
 
+gem 'awesome_print'
+
+gem 'pry'
+
+gem 'bcrypt'
+gem 'faker', '~>1.6.6'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
@@ -23,5 +30,5 @@ end
 
 group :test, :development do
   gem 'factory_girl'
-  gem 'faker'
+
 end

@@ -1,3 +1,4 @@
 class Sighting < ActiveRecord::Base
-  # Remember to create a migration!
+  belongs_to :checklist
+  belongs_to :user, through: :checklist
 end

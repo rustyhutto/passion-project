@@ -1,0 +1,8 @@
+<h2>Edit the Checklist</h2>
+<form action="/checklists/<%= @checklist.id %>" method="POST">
+  <input type="text" name="checklist[list_name]" value="<%= @checklist.list_name %>"><br>
+  <input type="text" name="checklist[location]" value="<%= @checklist.location %>"><br>
+  <input type="text" name="checklist[datetime]" value="<%= @checklist.datetime %>"><br>
+  <input type="hidden" name="_method" value="PUT">
+  <input type="submit" value="Submit">
+</form>

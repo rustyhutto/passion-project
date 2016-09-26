@@ -15,5 +15,5 @@ end
 
 delete '/sessions' do
   log_out if logged_in?
-  redirect '/questions'
+  redirect '/'
 end

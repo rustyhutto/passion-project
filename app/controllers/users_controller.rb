@@ -32,6 +32,13 @@ end
 # edit a user's information
 put '/users/:id' do
   # update user information using update method
+  @user = User.find(params[:id])
+  if params[:password] == ""
+    @user.update(username: params[:username], email: params[:email], password_hash: @user.password_hash)
+  else
+    @user.update(username: params[:username], email: params[:email], password: params[:password])
+  end
+  redirect "/users/#{@user.id}"
 end
 
 # delete a user

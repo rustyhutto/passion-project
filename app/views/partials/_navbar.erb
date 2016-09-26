@@ -1,13 +1,26 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Bird List</a>
+      <a class="navbar-brand" href="/">Bird List</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="/">Home</a></li>
-      <li><a href="/users/:id">Profile</a></li>
-      <li><a href="/users/new">Register</a></li>
-      <li><a href="/sessions/new">Login</a></li>
+      <% if logged_in? %>
+        <li>
+          <a href="/users/<%= current_user.id %>"><%= current_user.username %>
+          </a>
+        </li>
+          <form action="/sessions" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <input class="logout" type="submit" value="log out">
+          </form>
+
+      <% else %>
+        <li>
+          <a href="/users/new">sign up</a>
+        </li>
+        <li><a href="/sessions/new">log in</a></li>
+      <% end %>
     </ul>
   </div>
 </nav>

@@ -1,0 +1,15 @@
+<div class='container'>
+  <h2><%= "Hi, #{current_user.username}" %></h2>
+
+  <div id="add-checklist">
+    <p>Add a new <a href="/checklists/new">checklist</a></p>
+  </div>
+
+  <div id="user-checklists">
+    <ul>
+      <% @user.checklists.each do |checklist| %><br>
+        <li><a href="/checklists/<%= checklist.id %>"><%= checklist.list_name %></a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

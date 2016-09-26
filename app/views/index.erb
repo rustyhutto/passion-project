@@ -9,7 +9,9 @@
       zoom: 15,
       center: {lat: 37.7749, lng: -122.4194}
     });
+
     var geocoder = new google.maps.Geocoder();
+
 
     document.getElementById('submit').addEventListener('click', function() {
       geocodeAddress(geocoder, map);
@@ -30,8 +32,10 @@
       }
     });
   }
+
 </script>
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['AUTH_KEY']%>&callback=initMap">
+
 </script>
 </div>

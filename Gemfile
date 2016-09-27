@@ -21,6 +21,8 @@ gem 'pry'
 gem 'bcrypt'
 gem 'faker', '~>1.6.6'
 
+gem 'dotenv'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

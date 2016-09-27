@@ -1,41 +1,10 @@
-<div id="floating-panel">
-  <input id="address" type="textbox" value="San Francisco, CA">
-  <input id="submit" type="button" value="Search">
-</div>
-<div id="map">
-<script>
-  function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 15,
-      center: {lat: 37.7749, lng: -122.4194}
-    });
+<h1>Welcome to Bird List!<small>  A birding app</small></h1>
+<h2>Capabilities</h2>
+  <ul>
+    <li>Add birding checklists</li>
+    <li>Display checklists on a map</li>
+    <li>Add individual sightings to your checklist</li>
 
-    var geocoder = new google.maps.Geocoder();
-
-
-    document.getElementById('submit').addEventListener('click', function() {
-      geocodeAddress(geocoder, map);
-    });
-  }
-
-  function geocodeAddress(geocoder, resultsMap) {
-    var address = document.getElementById('address').value;
-    geocoder.geocode({'address': address}, function(results, status) {
-      if (status === 'OK') {
-        resultsMap.setCenter(results[0].geometry.location);
-        var marker = new google.maps.Marker({
-          map: resultsMap,
-          position: results[0].geometry.location
-        });
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
-      }
-    });
-  }
-
-</script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['AUTH_KEY']%>&callback=initMap">
-
-</script>
-</div>
+  </ul>
+<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/127/cache/cerulean-warbler_12756_600x450.jpg">
+<p><small>PHOTOGRAPH BY WIL HERSHBERGER, MY SHOT</small></p>

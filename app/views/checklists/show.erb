@@ -3,19 +3,13 @@
 <h3><%= @checklist.datetime %></h3>
 <p><a href="/checklists/<%= @checklist.id %>/edit">Edit</a> the checklist</p>
 
-<p>Add a new <a href="/sightings/new">sighting</a></p>
+<p>Add a new <a href="/checklists/<%= @checklist.id %>/sightings/new">sighting</a></p>
 
 <!-- list of all sightings for the checklist -->
 <% @checklist.sightings.each do |sighting| %>
   <ul>
     <li>
-      <%= @sighting.species %>
-      <%= @sighting.count %>
-      <%= @sighting.distance %>
-      <%= @sighting.observation_type %>
-      <%= @sighting.location %>
-      <%= @sighting.habitat %>
-      <%= @sighting.vegetation %>
+      <p><%= sighting.species %> <%= sighting.count %> <a href="/checklists/<%= @checklist.id %>/sightings/<%= sighting.id %>">View</a></p>
     </li>
   </ul>
 <% end %>

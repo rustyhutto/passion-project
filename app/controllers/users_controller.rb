@@ -1,5 +1,8 @@
 # new page for creating a user
 get '/users/new' do
+  p session[:user_id]
+  p "$" * 100
+  p current_user
   erb :'/users/new'
 end
 
@@ -7,7 +10,10 @@ end
 post '/users' do
   @user = User.new(params[:user])
   if @user.save
-    session[:user] = @user
+    session[:user_id] = @user.id
+    p session
+    p '*' * 150
+    p session[:user]
     redirect "/users/#{@user.id}"
   else
     @errors = ["Username or Email already exists"]

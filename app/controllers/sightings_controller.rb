@@ -20,13 +20,17 @@ get '/checklists/:checklist_id/sightings/:id' do
   erb :'/sightings/show'
 end
 
-get '/sightings/:id/edit' do
+get '/checklists/:checklist_id/sightings/:id/edit' do
+  @checklist = Checklist.find(params[:checklist_id])
   @sighting = Sighting.find(params[:id])
   erb :'/sightings/edit'
 end
 
-put '/sightings/:id' do
-
+put '/checklists/:checklist_id/sightings/:id' do
+  @checklist = Checklist.find(params[:checklist_id])
+  @sighting = Sighting.find(params[:id])
+  @sighting.update(params[:sighting])
+  redirect "/checklists/#{@checklist.id}"
 end
 
 delete '/sightings/:id' do

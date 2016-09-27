@@ -33,6 +33,9 @@ put '/checklists/:checklist_id/sightings/:id' do
   redirect "/checklists/#{@checklist.id}"
 end
 
-delete '/sightings/:id' do
-
+delete '/checklists/:checklist_id/sightings/:id' do
+  @checklist = Checklist.find(params[:checklist_id])
+  @sighting = Sighting.find(params[:id])
+  @sighting.destroy
+  redirect "/checklists/#{@checklist.id}"
 end

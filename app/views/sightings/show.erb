@@ -11,3 +11,8 @@
 </ul>
 
 <a href="/checklists/<%= @checklist.id %>/sightings/<%= @sighting.id %>/edit">Edit sighting</a>
+
+<form id="Delete sighting" action="/checklists/<%= @checklist.id %>/sightings/<%= @sighting.id%>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>

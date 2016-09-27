@@ -1,0 +1,13 @@
+<h2>Sighting</h2>
+<p>Back to <a href="/checklists/<%= @checklist.id %>">checklist</a></p>
+<ul>
+  <li>Species: </li><p><%= @sighting.species %></p>
+  <li>Count: </li><p><%= @sighting.count %></p>
+  <li>Distance: </li><p><%= @sighting.distance %></p>
+  <li>Observation type: </li><p><%= @sighting.observation_type %></p>
+  <li>Location: </li><p><%= @sighting.location %></p>
+  <li>Habitat: </li><p><%= @sighting.habitat %></p>
+  <li>Vegetation: </li><p><%= @sighting.vegetation %></p>
+</ul>
+
+<a href="/sightings/<%= @sighting.id %>/edit">Edit sighting</a>

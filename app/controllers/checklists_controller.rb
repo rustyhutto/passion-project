@@ -1,5 +1,9 @@
 get '/checklists/new' do
-  erb :'/checklists/new'
+  if request.xhr?
+    erb :'/partials/_new_checklist', layout: false
+  else
+    erb :'/checklists/new'
+  end
 end
 
 post '/checklists' do

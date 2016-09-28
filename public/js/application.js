@@ -1,6 +1,7 @@
 $(function() {
   $("#login-link").on("click", function(e){
     e.preventDefault();
+    $(this).hide();
 
     var linkTarget = $(this).attr("href")
 

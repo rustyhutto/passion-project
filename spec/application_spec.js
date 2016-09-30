@@ -1,4 +1,0 @@
-describe("login ajax", function(){
-
-
-});

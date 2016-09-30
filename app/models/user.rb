@@ -28,4 +28,13 @@ class User < ActiveRecord::Base
       return nil
     end
   end
+
+  # def total_bird_count
+  #   total = 0
+  #   current_user.sightings.each do |sighting|
+  #     total += sighting.count
+  #   end
+  #   return total
+  # end
+
 end

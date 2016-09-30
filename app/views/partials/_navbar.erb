@@ -9,9 +9,11 @@
         <li>
           <a href="/users/<%= current_user.id %>"><%= current_user.username %>
           </a>
+        </li>
+        <li>
           <form action="/sessions" method="POST">
             <input type="hidden" name="_method" value="DELETE">
-            <input class="logout" type="submit" value="log out">
+            <input class="logout btn" type="submit" value="log out">
           </form>
         </li>
       <% else %>

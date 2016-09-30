@@ -2,19 +2,33 @@
   <h2>New Sighting</h2>
   <form action="/checklists/<%= @checklist.id %>/sightings" method="post">
     <p>Species:</p>
-    <input type="text" name="sighting[species]">
+    <input type="text" name="sighting[species]" placeholder="e.g. American Robin">
+    <br>
+    <br>
     <p>Count:</p>
-    <input type="text" name="sighting[count]">
-    <p>Distance:</p>
-    <input type="text" name="sighting[distance]">
+    <input type="text" name="sighting[count]" placeholder="e.g. 2">
+    <br>
+    <br>
+    <p>Distance <small>(feet)</small>:</p>
+    <input type="text" name="sighting[distance]" placeholder="e.g. 150">
+    <br>
+    <br>
     <p>Observation Type:</p>
-    <input type="text" name="sighting[observation_type]">
+    <input type="text" name="sighting[observation_type]" placeholder="e.g. V">
+    <br>
+    <br>
     <p>Location:</p>
-    <input type="text" name="sighting[location]">
+    <input type="text" name="sighting[location]" placeholder="e.g. Half Dome">
+    <br>
+    <br>
     <p>Habitat:</p>
-    <input type="text" name="sighting[habitat]">
-    <p>Vegetation:</p>
-    <input type="text" name="sighting[vegetation]">
-    <input type="submit" value="Add">
+    <input type="text" name="sighting[habitat]" placeholder="e.g. Riparian">
+    <br>
+    <br>
+    <p>Vegetation Type:</p>
+    <input type="text" name="sighting[vegetation]" placeholder="e.g. Ponderosa Pine">
+    <br>
+    <br>
+    <input type="submit" placeholder="Add">
   </form>
 </div>

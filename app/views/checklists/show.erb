@@ -1,19 +1,15 @@
-<div class="container">
-  <h2><%= @checklist.list_name %></h2>
-  <h3><%= @checklist.location %></h3>
-  <h3><%= @checklist.datetime %></h3>
+<div class="container checklist-show">
+  <h4>Name: </h4>
+  <p><%= @checklist.list_name %></p>
+  <h4>Location: </h4>
+  <p><%= @checklist.location %></p>
+  <h4>Date: </h4>
+  <p><%= @checklist.datetime %></p>
   <p><a href="/checklists/<%= @checklist.id %>/edit">Edit</a> the checklist</p>
 
   <p>Add a new <a href="/checklists/<%= @checklist.id %>/sightings/new">sighting</a></p>
 
   <!-- list of all sightings for the checklist -->
-  <% @checklist.sightings.each do |sighting| %>
-    <ul>
-      <li>
-        <p><%= sighting.species %> <%= sighting.count %> <a href="/checklists/<%= @checklist.id %>/sightings/<%= sighting.id %>">View</a></p>
-      </li>
-    </ul>
-  <% end %>
 
 
     <form id="Delete checklist" action="/checklists/<%= @checklist.id%>" method="post">
@@ -21,4 +17,22 @@
       <input type="submit" value="Delete">
     </form>
 
+</div>
+<br>
+<br>
+<div class="container checklist-show">
+  <h4>Sightings</h4>
+    <table class="table">
+    <tr>
+      <th>Species</th>
+      <th>Count</th>
+      <th>Sighting</th>
+    </tr>
+      <% @checklist.sightings.each do |sighting| %>
+        <tr>
+         <td><%= sighting.species %></td>
+         <td><%= sighting.count %></td>
+         <td><a href="/checklists/<%= @checklist.id %>/sightings/<%= sighting.id %>">View</a></td>
+      <% end %>
+    </table>
 </div>

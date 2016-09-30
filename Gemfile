@@ -25,6 +25,8 @@ gem 'faker', '~>1.6.6'
 
 gem 'dotenv'
 
+gem 'geocoder'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

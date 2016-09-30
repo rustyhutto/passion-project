@@ -2,6 +2,7 @@ html, body {
         height: 100%;
         margin: 0;
         padding: 0;
+        background-color: #e6f5ff;
       }
 #map {
   height: 80%;
@@ -29,7 +30,17 @@ html, body {
 }
 
 #edit-profile {
-  margin-top: 100%;
+  float: bottom;
+}
+
+.logout {
+  padding: 13px;
+  /*color: #777;*/
+  background-color: #fff;
+}
+
+.checklist-show {
+  text-align: center;
 }
 
 /*#functionality {

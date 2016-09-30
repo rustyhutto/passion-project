@@ -1,8 +1,8 @@
 # new page for creating a user
 get '/users/new' do
-  p session[:user_id]
-  p "$" * 100
-  p current_user
+  # p session[:user_id]
+  # p "$" * 100
+  # p current_user
   erb :'/users/new'
 end
 

@@ -1,10 +1,12 @@
-<h2>New Checklist</h2>
-<form action="/checklists" method="post">
-  <p>Checklist Name:</p>
-  <input type="text" name="checklist[list_name]">
-  <p>Location:</p>
-  <input type="text" name="checklist[location]">
-  <p>Date:</p>
-  <input type="text" name="checklist[datetime]">
-  <input type="submit" value="Post">
-</form>
+<div class="container">
+  <h2>New Checklist</h2>
+  <form action="/checklists" method="post">
+    <p>Checklist Name:</p>
+    <input type="text" name="checklist[list_name]">
+    <p>Location:</p>
+    <input type="text" name="checklist[location]">
+    <p>Date:</p>
+    <input type="text" name="checklist[datetime]" value="MM-DD-YYYY">
+    <input type="submit" value="Post">
+  </form>
+</div>

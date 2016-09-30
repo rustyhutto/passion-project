@@ -1,18 +1,20 @@
-<h2>New Sighting</h2>
-<form action="/checklists/<%= @checklist.id %>/sightings" method="post">
-  <p>Species:</p>
-  <input type="text" name="sighting[species]">
-  <p>Count:</p>
-  <input type="text" name="sighting[count]">
-  <p>Distance:</p>
-  <input type="text" name="sighting[distance]">
-  <p>Observation Type:</p>
-  <input type="text" name="sighting[observation_type]">
-  <p>Location:</p>
-  <input type="text" name="sighting[location]">
-  <p>Habitat:</p>
-  <input type="text" name="sighting[habitat]">
-  <p>Vegetation:</p>
-  <input type="text" name="sighting[vegetation]">
-  <input type="submit" value="Add">
-</form>
+<div class="container">
+  <h2>New Sighting</h2>
+  <form action="/checklists/<%= @checklist.id %>/sightings" method="post">
+    <p>Species:</p>
+    <input type="text" name="sighting[species]">
+    <p>Count:</p>
+    <input type="text" name="sighting[count]">
+    <p>Distance:</p>
+    <input type="text" name="sighting[distance]">
+    <p>Observation Type:</p>
+    <input type="text" name="sighting[observation_type]">
+    <p>Location:</p>
+    <input type="text" name="sighting[location]">
+    <p>Habitat:</p>
+    <input type="text" name="sighting[habitat]">
+    <p>Vegetation:</p>
+    <input type="text" name="sighting[vegetation]">
+    <input type="submit" value="Add">
+  </form>
+</div>

@@ -2,14 +2,26 @@ html, body {
         height: 100%;
         margin: 0;
         padding: 0;
-        background-color: #e6f5ff;
+        background-color: #66B9Bf;
       }
+
+.navbar {
+  margin: 0px;
+}
 #map {
-  height: 80%;
+  height: 100%;
   width: 70%;
   float: right;
   left: -20px;
+  margin-right: 0px;
 }
+
+input{
+  border: none;
+  border-radius: 4px;
+}
+
+
 #floating-panel {
   position: absolute;
   top: 100px;

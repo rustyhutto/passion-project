@@ -1,6 +1,6 @@
 require 'faker'
 
-31.times do |x|
+32.times do |x|
   username = Faker::Name.name
   email = Faker::Internet.email
   password = 'password'

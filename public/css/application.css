@@ -33,6 +33,10 @@ html, body {
   float: bottom;
 }
 
+#functionality {
+  margin-top: 100px;
+}
+
 .logout {
   padding: 13px;
   /*color: #777;*/
@@ -43,6 +47,10 @@ html, body {
   text-align: center;
 }
 
+
+th {
+  text-align:
+}
 /*#functionality {
   margin-top: 50%;
 }
